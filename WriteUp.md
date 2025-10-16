@@ -15,7 +15,19 @@
 
 </div>
 
-## Indice
+# Indice  
+
+## · Reconocimiento  
+
+## · Bypass  
+
+## · Obtención de credenciales
+
+## · Entrada como usuario
+
+## · Escalada de privilegios
+
+## Reconocimiento  
 
 Como siempre digo, como buen hacker que somos, vamos a lanzar un nmap para el escaneo de puertos:
 
@@ -40,7 +52,9 @@ Ahora vamos a investigar el servicio del puerto 8080 del cual no obtenemos respu
 
 **¿Cómo he encontrado este login?**
 
-Debido a que en mi pequeña investigación sobre la app de silverpeas, descubrí que la aplicación tiene interfaz web con lo que probé a buscar el directorio en el nginx pero no hubo respuesta, al contrario que en el ùerto 8080.  
+Debido a que en mi pequeña investigación sobre la app de silverpeas, descubrí que la aplicación tiene interfaz web con lo que probé a buscar el directorio en el nginx pero no hubo respuesta, al contrario que en el puerto 8080.  
+
+## Bypass
 
 Ahora buscaremos en internet algún CVE de esta app, y encontraremos la siguiente página:  
 
@@ -62,15 +76,21 @@ Y enviamos la petición:
 
 ![Imágenes](Images/8.png)  
 
+## Obtención de credenciales
+
 Investigando la página, encontré una sección de notificaciones donde encontré unas credenciales para conectarse por ssh:  
 
 ![Imágenes](Images/9.png)  
+
+## Entrada como usuario  
 
 Nos conectaremos por ssh usando esas credenciales:  
 
 ![Imágenes](Images/10.png)  
 
 ![Imágenes](Images/11.png)  
+
+## Escalada de privilegios  
 
 Al hacer cat a /etc/passwd vemos que hay un usuario llamado tyler que posee privilegios de root:  
 
@@ -94,7 +114,25 @@ Accedemos a root y hacemos cat a root.txt:
 
 ![Imágenes](Images/15.png)  
 
+# DISCLAIMER
 
+Este writeup es SOLO para propósitos educativos.  
+Úsalo responsablemente en entornos autorizados como TryHackMe.  
+
+**Autor:** pablocaraballofernandez  
+**Plataforma:** TryHackMe
+
+</div>
+
+
+<div align="center">
+  
+  [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/pablo-caraballo-fern%C3%A1ndez-a12938358/)
+  [![TryHackMe](https://img.shields.io/badge/TryHackMe-212C42?style=for-the-badge&logo=tryhackme&logoColor=white)](https://tryhackme.com/p/CyberPablo)
+  [![HackTheBox](https://img.shields.io/badge/HackTheBox-111927?style=for-the-badge&logo=hackthebox&logoColor=9FEF00)](https://ctf.hackthebox.com/user/profile/872564)
+  .[![Cyberdefenders](https://img.shields.io/badge/CyberDefenders-1E3A5F?style=for-the-badge&logo=shield&logoColor=white)](https://cyberdefenders.org/p/cybersecpcarfer)
+  
+</div>
 
 
 
