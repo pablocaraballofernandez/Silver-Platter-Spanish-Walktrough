@@ -7,7 +7,6 @@
 
 ![TryHackMe](https://img.shields.io/badge/TryHackMe-212C42?style=for-the-badge&logo=tryhackme&logoColor=white)
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 
 [![Writeup](https://img.shields.io/badge/Writeup-Complete-success?style=for-the-badge)](https://github.com/tuusuario/ide-writeup)
 [![Difficulty](https://img.shields.io/badge/Difficulty-Easy-blue?style=for-the-badge)](https://tryhackme.com/room/ide)
